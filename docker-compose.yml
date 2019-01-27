@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   phd_data_service:
-    image: "guideinvestimentos/phd_data_service:${IMAGE_TAG}"
+    image: "guideinvestimentos/phd_data_service:${IMAGE_TAG1}"
     command:
       - /bin/sh
       - -c
