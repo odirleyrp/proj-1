@@ -1,21 +1,8 @@
-version: '3.1'
 services:
-  phd_data_service:
-    image: "guideinvestimentos/phd_data_service:${IMAGE_TAG1}"
-    command:
-      - /bin/sh
-      - -c
-      - |
-        npm run migration
-        pm2 start dist/app/server.js --node-args="--max-old-space-size=4096" --no-daemon
-    env_file:
-      - '.env'
+  casa02:
+    image: odirleyrp/indusval-01:v4
+    stdin_open: true
+    tty: true
     ports:
-      - "${NODE_PORT}:${NODE_PORT}"
-    volumes:
-      - ~/.ssh:/ssh-keys
-
-networks:
-  default:
-    external:
-      name: phd_default
+    - 8585:80/tcp
+    labels:
