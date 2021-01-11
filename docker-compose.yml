@@ -1,8 +1,0 @@
-services:
-  casa02:
-    image: odirleyrp/indusval-01:v4
-    stdin_open: true
-    tty: true
-    ports:
-    - 8686:80/tcp
-    labels:
